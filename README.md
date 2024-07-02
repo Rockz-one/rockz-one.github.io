@@ -1,8 +1,8 @@
 # rockz-one.github.io
-Homepage for rockz
+[Homepage](https://rockz-one.github.io) for rockz, at the moment it will be a single page single page app. Most important tasks are in the [mvp issue](https://github.com/Rockz-one/rockz-one.github.io/issues/1)
 
 ### Depedencies
-- [nodejs]() or [docker nodejs]() env
+- [nodejs](https://nodejs.org/en) or [docker nodejs](https://hub.docker.com/_/node) env
 
 ### Development
 Watch live edits @ [localhost:5173](localhost:5173)
@@ -21,9 +21,7 @@ git add . && git commit -m "updated website" && git push
 ```
 
 ### Warning
-```
-Page titles should not match any rockz repo becuase it will probably some some loading conflicts
-```
+Page titles should not match any rockz repo becuase it will probably make some loading conflicts
 
 ### Resources
 - [Great free svgs](https://www.svgrepo.com/)
