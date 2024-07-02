@@ -9,17 +9,17 @@
             about us
         </div>
     </div>
-    <div class="services">
-            services
+    <div class="section services">
+        Services
     </div>
-    <div class="contact">
-            services
+    <div class="section contact">
+        Contact
     </div>
-    <div class="contact">
-            services
+    <div class="section contact">
+        Github
     </div>
-    <div class="store">
-            services
+    <div class="section store">
+        Store
     </div>
 </template>
 
@@ -43,9 +43,11 @@
     font-size: var(--font-md);
 }
 
-.services{
-    display: grid;
-    color  : var(--font-color);
-    padding: 10px;
+.section{
+    display   : grid;
+    color     : var(--font-color);
+    padding   : 10px;
+    text-align: center;
+    font-size : var(--font-md);
 }
 </style>

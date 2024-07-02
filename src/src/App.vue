@@ -26,7 +26,7 @@ export default{
   --bg-color             : #1D1F21; 
   --sec-bg-color         : #252425;
   --third-bg-color       : #CEB22A;
-  --font-color           : #EAECF0;
+  --font-color           : white;
   --sec-font-color       : #666666;
   --third-font-color     : #010100;
   --link-color           : #408DED;
@@ -36,8 +36,8 @@ export default{
   /* --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
   --font-family-base     : -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  --font-sm              : 18px;
-  --font-md              : 24px;
+  --font-sm              : 16px;
+  --font-md              : 22px;
   --font-lg              : 48px;
 }
 

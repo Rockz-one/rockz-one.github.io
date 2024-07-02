@@ -48,7 +48,8 @@ export default{
     width      : 100%;
     text-align : center;
     align-content  : center;
-    box-shadow     : 0px 0px 20px 10px rgba(255, 255, 255, 1);
+    /* box-shadow     : 0px 0px 20px 10px rgba(255, 255, 255, 1); */
+    box-shadow     : 0 1px 2px 0 #0000001a;
     z-index        : 1;
 }
 .skinny{
@@ -65,6 +66,7 @@ export default{
     width         : max-content;
     padding       : 0px 8px 0px 8px;
     margin        : 0px 8px 0px 8px;
+    font-weight   : 600;
     /* background-color: blue; */
 }
 .option:hover{
