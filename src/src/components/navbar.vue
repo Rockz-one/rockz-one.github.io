@@ -66,12 +66,14 @@ export default{
     width         : max-content;
     padding       : 0px 8px 0px 8px;
     margin        : 0px 8px 0px 8px;
-    font-weight   : 600;
+    font-weight   : 500;
     /* background-color: blue; */
+    filter: brightness(120%);
 }
 .option:hover{
-    opacity: .6;
+    color : var(--third-bg-color);
     cursor : pointer;
+    transition: all .13s ease-in-out;
 }
 .left{
     float: left;

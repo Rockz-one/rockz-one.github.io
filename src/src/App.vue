@@ -36,7 +36,7 @@ export default{
   /* --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
   --font-family-base     : -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  --font-sm              : 16px;
+  --font-sm              : 17px;
   --font-md              : 22px;
   --font-lg              : 48px;
 }
@@ -53,6 +53,12 @@ html,body{
   overflow-x : hidden;
   font-family: var(--font-family-base);
   font-size  : var(--font-md);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   
 }
 a{
