@@ -6,7 +6,7 @@
             ROCKZ
         </div>
         <div class="about">
-            about us
+            Practical tools made by engineers for engineers
         </div>
     </div>
     <div class="section services">
