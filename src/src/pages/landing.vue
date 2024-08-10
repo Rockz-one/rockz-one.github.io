@@ -122,14 +122,14 @@ export default{
     text-align  : center;
     animation   : waiting 7.2s;
     opacity     : 1;
-    margin-right:20px;
-    margin-left:0px;
-    padding    :0px;
+    margin-right: 20px;
+    margin-left : 0px;
+    padding     : 0px;
 }
 .static-containter{
-	position   : relative;
-	height     : 25px;
-	display    : block;
+    position   : relative;
+    height     : 25px;
+    display    : block;
     width      : max-content;
     white-space: nowrap;
     margin     : 0;
@@ -155,8 +155,8 @@ export default{
     background-color: var(--third-bg-color);
     border-left     : .15em solid white;
     animation       : 
-    typing2 1.5s steps(20, end),
-    blink-caret .15s step-end infinite;
+        typing2 1.5s steps(20, end),
+        blink-caret .15s step-end infinite;
     animation-delay: 5s;
     opacity        : 1;
 }
@@ -180,8 +180,8 @@ export default{
     min-height: 15px; 
     border-left: 1px solid var(--third-bg-color);        
     animation: 
-    typing2 .45s steps(20, end) 11,
-    blink-caret2 .15s step-end 30;
+        typing2 .45s steps(20, end) 11,
+        blink-caret2 .15s step-end 30;
 }
 @keyframes waiting{
     0%{opacity: 0;height:0px} 
