@@ -22,6 +22,7 @@ export default{
   --text-box-color: #171A22;
   --filter-button-color : #21242F;
 }  */
+/*
 :root{
   --bg-color             : #1D1F21; 
   --sec-bg-color         : #252425;
@@ -33,12 +34,33 @@ export default{
   --button-color         : white;
   --text-box-color       : #3B3A3B;
   --filter-button-color  : #3B3A3B;
-  /* --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+   --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // out
   --font-family-base     : -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   --font-sm              : 17px;
   --font-md              : 22px;
   --font-lg              : 48px;
+}
+*/
+
+:root{
+  --bg-color             : white; 
+  --sec-bg-color         : white;
+  --third-bg-color       : #252425;
+  --font-color           : black;
+  --sec-font-color       : white;
+  --third-font-color     : white;
+  --link-color           : black;
+  --button-color         : black;
+  --text-box-color       : #3B3A3B;
+  --filter-button-color  : #3B3A3B;
+  --font-family-base     : "Roboto", sans-serif;
+  --font-weight          : 400;
+  /* --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; */
+  --font-sm              : 17px;
+  --font-md              : 22px;
+  --font-lg              : 48px;
+  --font-style           : normal;
 }
 
 * {
@@ -51,6 +73,7 @@ html,body{
   top        : 0px;
   background : var(--bg-color);
   overflow-x : hidden;
+  scroll-behavior: smooth;
   font-family: var(--font-family-base);
   font-size  : var(--font-md);
   -webkit-touch-callout: none;

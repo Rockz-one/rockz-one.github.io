@@ -2,14 +2,14 @@
     <div class="navbar">
        <div class="wide" v-if="width>800">
             <!-- left to right -->
-            <div class="option left">logo</div>
-            <div class="option left">services</div>
+            <a href="/" class="option left"><img src="/icon2.webp" class="foo"/></a>
+            <a href="#services" class="option left">services</a>
             <!-- center -->
                 <!-- <div class="option center">about</div> -->
             <!-- right to left -->
-            <div class="option right">store</div>
-            <div class="option right">contact</div>
-            <div class="option right">github</div>
+            <a href="#store" class="option right">store</a>
+            <a href="#contact" class="option right">contact</a>
+            <a href="https://github.com/Rockz-one" target="_blank"  class="option right">github</a>
        </div>
        <div class="skinny" v-else>
             <div class="dropdown">
@@ -51,6 +51,7 @@ export default{
     /* box-shadow     : 0px 0px 20px 10px rgba(255, 255, 255, 1); */
     box-shadow     : 0 1px 2px 0 #0000001a;
     z-index        : 1;
+    overflow       : hidden;
 }
 .skinny{
     grid-template-columns: 100px auto 100px;
@@ -58,6 +59,7 @@ export default{
 .wide{
     padding : 10px;
     overflow: hidden;
+    line-height: 36px;
 }
 .option{
     text-transform: capitalize;
@@ -71,7 +73,7 @@ export default{
     filter: brightness(120%);
 }
 .option:hover{
-    color : var(--third-bg-color);
+    opacity: .5;
     cursor : pointer;
     transition: all .13s ease-in-out;
 }
@@ -83,5 +85,9 @@ export default{
 }
 .right{
     float: right;
+}
+.foo{
+    height:32px;
+    width: 32px;
 }
 </style>
