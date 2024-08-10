@@ -20,14 +20,14 @@
         <div class="container">
             <div class="a">
                 <div class="c">
-                    > echo "Making stuff"
+                    {{prompt}}
                 </div>
                 <div class="b"></div>
             </div>
         </div>
 
         <pre class="terminal-animation-done">
-Making stuff
+{{result}}
         </pre>
         <!-- <div class="about">
             Practical tools made by engineers for engineers
@@ -47,6 +47,25 @@ Making stuff
     </div>
 </template>
 
+<script>
+let prompts = [`> make BLD_DIR="stuff"`, `> echo "making stuff"`]
+let results = ["Making stuff...","Making stuff..."]
+
+export default{
+    data(){
+        return {
+            prompt : "",
+            result : ""
+        }
+    },
+    created(){
+        let max     = prompts.length
+        let index   = Math.floor(Math.random() * max);
+        this.prompt = prompts[index]
+        this.result = results[index]
+    }
+}
+</script>
 <style scoped>
 .landing{
     background: var(--third-bg-color);
