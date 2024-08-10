@@ -2,19 +2,21 @@
     <div class="landing">
         <div class="padding">
         </div>
-        <pre style="display:block; margin-right:auto; margin-left:auto;font-size:10px">                                                      
+        <div class="logo">
+        <pre >                                      
                                                       __///\\__
                                                      ////////._\ 
   __________               __    __________         /\////////..\    
   \______   \ ____   ____ |  | __\____    /        /..\////_|....\  
    |       _//  _ \_/ ___\|  |/ /  /     /         |...|    /.....\    
-   |    |   (  &lt;_&gt; )  \___|    &lt;  /     /_         /../     \.....|    
+   |    |   (  &lt;_&gt; )  \___|    &lt;  /     /_         /../     \.....| 
    |____|_  /\____/ \___  &gt;__|_ \/_______ \       /___\_   _\..../     
           \/            \/     \/        \/       \     \_/#|.../ 
                                                    \     |#||__/      
                                                     \ __/#### /     
                                                      \#######/
         </pre>
+        </div>
         <div class="container">
             <div class="a">
                 <div class="c">
@@ -23,6 +25,7 @@
                 <div class="b"></div>
             </div>
         </div>
+
         <pre class="terminal-animation-done">
 Making stuff
         </pre>
@@ -30,7 +33,7 @@ Making stuff
             Practical tools made by engineers for engineers
         </div> -->
     </div>
-    <div id="services" class="section services">services</div>
+    <div id="services" class="section services">What We Do</div>
     <div class="content">
 
     </div>
@@ -46,24 +49,24 @@ Making stuff
 
 <style scoped>
 .landing{
-    position  : relative;
     background: var(--third-bg-color);
     color     : var(--third-font-color);
     font-size : var(--font-lg);
-    display   : grid;
     height    : 400px;
+    width     : 100%;
+    overflow  : hidden;
 }
 .padding{
     height    : 20px;
 }
 .logo{
-    justify-self:center;
+    display     :block; 
+    font-size   : var(--font-xsm);
+    width       : min-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
 }
-.about{
-    justify-self:center;
-    font-size: var(--font-md);
-}
-
 .section{
     font-family: monospace;
     text-transform: uppercase;
@@ -76,37 +79,25 @@ Making stuff
     border-bottom: 1px dashed lightgrey;
     margin-left: 40px;
     margin-right: 49px;
-
 }
-
 .content{
     display   : grid;
     min-height: 300px;
 }
-
-
-/* .terminal-animation{
-    display     : block;
-    width       : 427px;
-    margin-right: auto;
-    margin-left : auto;
-    font-size   : 10px;
-    text-align  : left;
-    text-align  : center;
-} */
+@keyframes waiting{
+    0%{opacity: 0;height:0px} 
+    100%{opacity: 0;height:0px} 
+}
 .terminal-animation-done{
     display     : block;
-    width       : 427px;
-    margin-right: auto;
-    margin-left : auto;
-    font-size   : 10px;
-    text-align  : left;
+    width       : 100%;
+    font-size   : var(--font-xsm);
     text-align  : center;
     animation   : waiting 2.2s;
-}
-@keyframes waiting{
-    0%{display: none;} 
-    100%{display: none;} 
+    opacity     : 1;
+    margin-right:20px;
+    margin-left:0px;
+    padding    :0px;
 }
 .container{
     display     : block;
@@ -123,7 +114,7 @@ Making stuff
     margin:0;
     padding: 0px;
     overflow: hidden;
-    font-size: 10px;
+    font-size: var(--font-xsm);
 }
 .c{
     height: 0px;
@@ -132,6 +123,7 @@ Making stuff
 	z-index: -10;
     animation: fooo 2s linear;
     overflow: hidden;
+    padding-left: 10px;
 }
 @keyframes fooo {
   0% {

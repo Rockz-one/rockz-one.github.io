@@ -34,7 +34,8 @@ export default{
   --button-color         : white;
   --text-box-color       : #3B3A3B;
   --filter-button-color  : #3B3A3B;
-   --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // out
+  --font-family-base     : "Roboto", sans-serif;
+   --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
   --font-family-base     : -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   --font-sm              : 17px;
@@ -56,18 +57,24 @@ export default{
   --filter-button-color  : #3B3A3B;
   --font-family-base     : "Roboto", sans-serif;
   --font-weight          : 400;
-  /* --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; */
+   --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --font-xsm             : 10px;  
   --font-sm              : 17px;
   --font-md              : 22px;
   --font-lg              : 48px;
   --font-style           : normal;
+}
+@media (max-width: 800px) {
+  :root{
+    --font-xsm : 8px;
+  }
 }
 
 * {
   box-sizing: border-box;
 }
 /* https://stackoverflow.com/questions/5102820/scrolling-of-whole-page-instead-of-inner-div-only */
-html, body { height: 100%; } 
+html, body { height: 100%;width:100vw;} 
 html,body{
   margin     : 0px;
   top        : 0px;
