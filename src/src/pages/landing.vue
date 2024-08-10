@@ -29,6 +29,7 @@
         <pre class="terminal-animation-done">
 {{result}}
         </pre>
+        <!-- In fututre releases put hidden hover ascii messages -->
         <!-- <div class="about">
             Practical tools made by engineers for engineers
         </div> -->
@@ -84,12 +85,12 @@ export default{
     width       : min-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top  : 60px;
 }
 .section{
     font-family: monospace;
     text-transform: uppercase;
-    margin-top: 125px;
+    margin-top: 20px;
     display   : grid;
     color     : var(--font-color);
     padding   : 10px;
