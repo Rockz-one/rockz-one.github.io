@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <!-- Import scripts to use a proxy to bypass iframe blockers -- https://github.com/niutech/x-frame-bypass/tree/master -->
+ <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+ <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+
+   <iframe id="foo" is="x-frame-bypass" src="https://github.com/BarakBinyamin/"></iframe>
+   <a href="#" onclick="getIframeContent('foo');">Get the content of Iframe</a>
+   <pre id="doc" ></pre>
+ 
+    <script>
+        function getIframeContent(frameID) {
+            let frameObj = document.getElementById(frameID);
+            let frameContent = frameObj.contentWindow.document.body.innerHTML;
+            // show the html
+            document.getElementById('doc').innerText = frameContent
+            // scrape the bio and log it as an example
+            console.log(frameObj.contentWindow.document.querySelectorAll('[ data-bio-text]')[0].getAttribute("data-bio-text"))
+        } 
+    </script>
+
+</body>
+</html>
