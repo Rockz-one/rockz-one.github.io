@@ -16,6 +16,10 @@
                                                     \ __/#### /     
                                                      \#######/
         </pre>
+        <div class="writer">
+            <div class="pointer"></div>
+            <div class="screen-cover"></div>
+        </div>
         </div>
         <div class="container">
             <div class="a">
@@ -80,10 +84,11 @@ export default{
     height    : 20px;
 }
 .logo{
-    display     :block; 
+    position    : relative;
+    display     : block; 
     font-size   : var(--font-xsm);
     width       : min-content;
-    margin-left: auto;
+    margin-left:  auto;
     margin-right: auto;
     margin-top  : 60px;
 }
@@ -113,7 +118,7 @@ export default{
     width       : 100%;
     font-size   : var(--font-xsm);
     text-align  : center;
-    animation   : waiting 2.2s;
+    animation   : waiting 7.2s;
     opacity     : 1;
     margin-right:20px;
     margin-left:0px;
@@ -141,11 +146,12 @@ export default{
     top : 0px;
     left: 0px;
 	z-index: -10;
-    animation: fooo 2s linear;
+    animation: showForASecond 2s linear;
     overflow: hidden;
     padding-left: 10px;
+    animation-delay: 5s;
 }
-@keyframes fooo {
+@keyframes showForASecond {
   0% {
     height: 25px;
   }
@@ -166,6 +172,7 @@ export default{
     animation: 
     typing2 1.5s steps(20, end),
     blink-caret2 .15s step-end infinite;
+    animation-delay: 5s;
     opacity: 1;
 }
 @keyframes show{
@@ -180,4 +187,42 @@ export default{
   from { margin-left: 0% }
   to { margin-left: 100%; }
 } 
+/*  
+<div container>
+    blinker
+    reset of fill - not automated
+<div>   
+*/
+
+.screen-cover{
+    background-color: var(--third-bg-color);
+    height: 100%;
+}
+.writer{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height:  0;
+    bottom: 0;
+    left:0;
+    animation: 
+    show 5s steps(11, end);
+}
+.pointer{
+    background-color: var(--third-bg-color);
+    height:  1em;
+    min-height: 15px; 
+    border-left: 1px solid var(--third-bg-color);        
+    animation: 
+    typing2 .45s steps(20, end) 11,
+    blink-caret3 .15s step-end 30;
+}
+@keyframes show {
+  from { height: calc(100% - 1em)}
+  to { height: 0; }
+} 
+@keyframes blink-caret3 {
+  from, to { border-color: transparent;}
+  50% { border-color: white; }
+}
 </style>
