@@ -16,10 +16,10 @@
                                                     \ __/#### /     
                                                      \#######/
             </pre>
-            <div class="shrinking-containter">
+            <!-- <div class="shrinking-containter">
                 <div class="cursor-1"></div>
                 <div class="screen-cover"></div>
-            </div>
+            </div> -->
         </div>
         <div class="terminal-animation-prompt">
             <div class="static-containter">
@@ -40,7 +40,20 @@
     </div>
     <div id="services" class="section services">What We Do</div>
     <div class="content">
-
+        <div>
+            <!-- <div style="padding: 10px; text-align:center;align-self:center;justify-self:center;height:max-content;background:red;">
+                fancy description 
+            </div>
+            <div v-for="profile in profiles" style="display:grid;width:100%;background:aqua;justify-content:center;grid-template-columns: 220px 220px;padding:10px;grid-gap:10px;">
+                <div class="card" style="width:100%;display:grid;background:white; box-shadow: 2px 2px 2px 2px rgba(0,0,0,.5);border-radius:5px;">
+                    <div style="overflow:hidden;background:blue;border-radius:100%;width:50px;height:50px;justify-self:center">Icon</div>
+                    <div>{{profiles.description}}</div>
+                </div>
+            </div>
+            <div>
+                
+            </div> -->
+        </div>
     </div>
     <div id="contact"  class="section contact">contact</div>
     <div class="content">
@@ -50,28 +63,48 @@
     <div class="content">
 
     </div>
+    <div class="padding"></div>
+    <div class="padding"></div>
+    <div class="padding"></div>
+    <div class="padding"></div>
+    <!-- Used to get data from github -->
+    <iframe id="githubIframe" heihgt="0px" width="0px" is="x-frame-bypass" src=""></iframe>
 </template>
 
 <script>
-let prompts = [`> make BLD_DIR="stuff"`, `> echo "making stuff"`]
-let results = ["Making stuff...","Making stuff..."]
+let prompts      = [`> make BLD_DIR="stuff"`, `> echo "making stuff"`]
+let results      = ["Making stuff...","Making stuff..."]
+let profileLinks = ["https://github.com/BarakBinyamin","https://github.com/ErezBinyamin"]
 
 export default{
     data(){
         return {
-            prompt : "",
-            result : ""
+            prompt  : "",
+            result  : "",
+            profiles: []
         }
     },
-    created(){
-        let max     = prompts.length
-        let index   = Math.floor(Math.random() * max);
-        this.prompt = prompts[index]
-        this.result = results[index]
+    async created(){
+        let max        = prompts.length
+        let index      = Math.floor(Math.random() * max);
+        this.prompt    = prompts[index]
+        this.result    = results[index]
+
+        for (let index=0; index<profileLinks.length; index++){
+            let profile      = {}
+            let frameObj     = document.getElementById("githubIframe");
+            frameObj.src     = profileLinks[link]
+            let frameContent = frameObj.contentWindow.document.body.innerHTML;
+            let description  = frameObj.contentWindow.document.querySelectorAll('[ data-bio-text]')[0].getAttribute("data-bio-text")
+            profile.description = description
+            this.profiles[index] = profile
+        }
+        
     }
 }
 </script>
 <style scoped>
+/* Logo and banner */
 .landing{
     background: var(--third-bg-color);
     color     : var(--third-font-color);
@@ -100,14 +133,13 @@ export default{
     color         : var(--font-color);
     padding       : 10px;
     text-align    : center;
-    font-size     : var(--font-sm);
+    font-size     : var(--font-md);
     border-bottom : 1px dashed lightgrey;
     margin-left   : 40px;
     margin-right  : 49px;
 }
 .content{
     display   : grid;
-    min-height: 300px;
 }
 .terminal-animation-prompt{
     display     : block;
@@ -120,7 +152,7 @@ export default{
     width       : 100%;
     font-size   : var(--font-xsm);
     text-align  : center;
-    animation   : waiting 7.2s;
+    animation   : waiting 2.2s;
     opacity     : 1;
     margin-right: 20px;
     margin-left : 0px;
@@ -144,7 +176,6 @@ export default{
     animation       : showForASecond 2s linear;
     overflow        : hidden;
     padding-left    : 10px;
-    animation-delay : 5s;
 }
 .cursor-2{
     position        : absolute;
@@ -157,7 +188,6 @@ export default{
     animation       : 
         typing2 1.5s steps(20, end),
         blink-caret .15s step-end infinite;
-    animation-delay: 5s;
     opacity        : 1;
 }
 .screen-cover{
@@ -211,4 +241,15 @@ export default{
   from, to { border-color: transparent;}
   50% { border-color: white; }
 }
+
+
+/* What we do */
+
+
+
+
+/* Contact */
+
+/* Store */
+
 </style>

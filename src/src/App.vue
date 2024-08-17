@@ -59,8 +59,8 @@ export default{
   --font-weight          : 400;
    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   --font-xsm             : 10px;  
-  --font-sm              : 17px;
-  --font-md              : 22px;
+  --font-sm              : 15px;
+  --font-md              : 17px;
   --font-lg              : 48px;
   --font-style           : normal;
 }
@@ -82,14 +82,13 @@ html,body{
   overflow-x : hidden;
   scroll-behavior: smooth;
   font-family: var(--font-family-base);
-  font-size  : var(--font-md);
+  font-size  : var(--font-sm);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  
+  user-select: none;  
 }
 a{
   text-decoration: none;

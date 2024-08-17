@@ -46,7 +46,7 @@ export default{
     /* display    : grid; */
     background : var(--sec-bg-color);
     color      : var(--font-color);
-    font-size  : var(--font-sm);
+    font-size  : var(--font-md);
     height     : 60px;
     width      : 100%;
     text-align : center;
